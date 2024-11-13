@@ -1,69 +1,82 @@
 /* styles.css */
 
-/* Basic Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-}
-
-/* Fade-In Animation */
+/* Animation Styles */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Navbar Hover Effect */
-nav a:hover {
-    color: #FF6900;
-    transition: color 0.3s ease;
+.scale-up {
+    transform: scale(0.95);
+    transition: transform 0.3s ease-out;
+}
+
+.scale-up:hover {
+    transform: scale(1);
 }
 
 /* Banner Image Styling */
 .banner img {
-    border-bottom: 4px solid #FF6900;
+    transition: opacity 1s ease-in-out, transform 0.5s ease;
 }
 
-/* Header Styling */
+/* Navbar Styling */
+nav {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Cursive', sans-serif;
+}
+
+/* Customizing Links */
+nav a, footer a {
+    text-decoration: none;
+    color: #D883FF;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, footer a:hover {
+    color: #A97CFF;
+}
+
+/* Heading and Text Colors */
 h2 {
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    color: #FF6900;
+    font-family: 'Cursive', sans-serif;
+}
+
+/* Container Adjustments */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Soft Shadow and Border Radius for Images and Boxes */
+img, .banner img, section, footer {
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(168, 112, 240, 0.1);
 }
 
 /* Footer Styling */
-footer p {
-    color: #888;
-    transition: color 0.3s;
-}
-footer p:hover {
-    color: #FF6900;
+footer {
+    border-top: 2px solid #FFC1E3;
 }
 
-/* Button Styling */
-[data-fillout-button-text] {
-    color: #FFF;
-    background-color: #FF6900;
-    border: 1px solid #FF6900;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-[data-fillout-button-text]:hover {
-    background-color: #ff5500;
-    color: #FFF;
+/* Background Colors for Sections */
+#about {
+    background: #FFE4EF;
+    padding: 1.5rem;
 }
 
-/* Mobile Menu Transition */
-#menu-toggle {
-    transition: transform 0.3s;
+#book {
+    background: #E9E8FF;
+    padding: 1.5rem;
 }
-#menu-toggle:hover {
-    transform: rotate(90deg);
+
+footer {
+    background: #D2C7FF;
+    padding: 1.5rem;
 }
