@@ -1,82 +1,118 @@
-/* styles.css */
+/* Basic Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #fdf5e6; /* Light beige background */
+    color: #333333; /* Dark gray text for readability */
+}
 
-/* Animation Styles */
+/* Navbar */
+nav {
+    background-color: #008080; /* Teal background for header */
+    transition: background-color 0.3s ease;
+}
+
+nav a {
+    color: #f5deb3; /* Beige color for nav links */
+}
+
+nav a:hover {
+    color: #ffe4c4; /* Light beige for hover effect */
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Section Headers */
+h2 {
+    color: #008080; /* Teal for section headers */
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #008080; /* Teal footer background */
+    color: #f5deb3; /* Beige text */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    animation: fadeIn 1.2s forwards;
 }
 
 .fade-in.visible {
     opacity: 1;
-    transform: translateY(0);
 }
 
-.scale-up {
-    transform: scale(0.95);
-    transition: transform 0.3s ease-out;
+/* Mobile Menu Toggle */
+#menu {
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
 }
 
-.scale-up:hover {
-    transform: scale(1);
+/* Button Styles for Form Trigger */
+[data-fillout-button-color="#FF90B3"] {
+    background-color: #FF90B3;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
 }
 
-/* Banner Image Styling */
-.banner img {
-    transition: opacity 1s ease-in-out, transform 0.5s ease;
+[data-fillout-button-color="#FF90B3"]:hover {
+    background-color: #ffa1c4;
 }
 
-/* Navbar Styling */
-nav {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Cursive', sans-serif;
-}
-
-/* Customizing Links */
-nav a, footer a {
-    text-decoration: none;
-    color: #D883FF;
-    transition: color 0.3s ease;
-}
-
-nav a:hover, footer a:hover {
-    color: #A97CFF;
-}
-
-/* Heading and Text Colors */
-h2 {
-    font-family: 'Cursive', sans-serif;
-}
-
-/* Container Adjustments */
+/* Additional Utility Styles */
 .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
+    padding: 1rem;
 }
 
-/* Soft Shadow and Border Radius for Images and Boxes */
-img, .banner img, section, footer {
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(168, 112, 240, 0.1);
+.text-beige-200 {
+    color: #f5deb3; /* Lighter beige */
 }
 
-/* Footer Styling */
-footer {
-    border-top: 2px solid #FFC1E3;
+.bg-beige-100 {
+    background-color: #fdf5e6; /* Light beige background */
 }
 
-/* Background Colors for Sections */
-#about {
-    background: #FFE4EF;
-    padding: 1.5rem;
+.bg-teal-600 {
+    background-color: #008080; /* Teal background */
 }
 
-#book {
-    background: #E9E8FF;
-    padding: 1.5rem;
+.text-teal-600 {
+    color: #008080; /* Teal text */
 }
 
-footer {
-    background: #D2C7FF;
-    padding: 1.5rem;
+/* Responsive Text */
+@media (min-width: 640px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    h2 {
+        font-size: 3rem;
+    }
 }
